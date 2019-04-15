@@ -1,0 +1,350 @@
+/*
+    1001 дрібниця
+    01.12.2018
+    Colors:
+    logo red #ee1d25
+*/
+/* General styles for all devices  */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+}
+.clear { clear: both; }
+  
+/********* HEADER *******/
+
+#main_header {
+  position: fixed;
+  z-index: 20;
+  top: 0px;
+  width: 100%;
+  background-color: #eee;
+  height: 66px;
+}
+#main_header #logo {
+  width: 100px;
+  height: 50px;
+  padding-left: 20px;
+  float: left; 
+}
+#main_header #logo img {
+  width: 100%;
+  height: auto;
+}
+#main_header #menu_collapsed {
+  margin: 20px 20px 10px 20px;
+  width: 30px;
+  height: 24px;
+  float: right;
+  display: block; 
+}
+#main_header .menu-line {
+  width: 100%;
+  height: 2px;
+  background-color: #ee1d25;
+  margin-bottom: 6px; 
+}
+#main_header nav {
+  display: block;
+  float: none;
+  margin-top:15px;
+  margin-right: 0;
+}
+#main_header .active { display: none; }
+#main_header ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: outside;
+  overflow: hidden;
+  list-style-type: none;
+  animation: moveFromBottom 300ms ease-in-out;
+}
+#main_header li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #444; 
+}
+#main_header nav a {
+  display: block;
+  width: 100%;
+  height: 55px;
+  line-height: 54px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #fff;
+}
+#main_header nav li:hover {
+  background-color: #fff;
+}
+#main_header nav li:hover a { color: #ee1d25; }
+
+@keyframes moveFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/********* SLIDER ***********/
+
+#slider {
+  position: relative;
+  margin-top: 68px; 
+}
+#slider #img1, #slider #img2, #slider #img3 {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden; 
+}
+.slide .content {
+  background-color: rgba(50, 50, 50, 0.1);
+  z-index: 10; 
+}
+.slide h1, .slide h3 {
+  color: white;
+}
+/*********** ABOUT US *************/
+#about {
+  width: 100%; 
+  margin: 0px auto;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+  background-color: #444;
+}
+#about #delivery {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/************ MAIN PAGE CATEGORIES  **********/
+
+#categories {
+    margin: 0 auto;
+    width: 99%; 
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+#categories .category {
+  cursor: pointer;
+  width: 300px;
+  padding: 10px 10px;
+  height: auto;
+  margin: 20px auto 20px auto;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/******* COPYRIGHT *********/
+.copyright { background-color: #333; }
+
+.copyright p {
+  font-size: 9px;
+  color: white;
+}
+.copyright a {
+  text-decoration: none;
+  color: white;
+}
+
+/****** STYLES FOR PRODUCT LIST PAGE *************/
+.category-page h1 {
+  margin-top: 100px;
+  color: #333;
+  font-weight: 300;
+  text-align: center;
+}
+#product-list {
+  margin: 0 auto;
+  width: 99%; 
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+#product-list .card {
+  color: #333;
+  width: 300px;
+  padding: 10px 10px;
+  height: auto;
+  margin: 20px auto 20px auto;
+  background-color: white;
+}
+
+/******************************/
+/******** MEDIA QUERIES  ******/
+/******************************/
+@media screen and (max-width: 767px) {
+    
+    /********* SLIDER ***********/
+    
+    #slider { height: 219px; }
+    .slide .content {
+      margin-top: 25px;  
+      width: 90%;
+      padding: 15px 30px;
+    }
+    .slide .content h1 {
+      font-size: 26px;
+    }
+    .slide .content h3 {
+      font-size: 22px;
+    }
+
+    #img1 {background-image: url("../images/slider/kitchen_860x219.jpg"); }
+    #img2 {background-image: url("../images/slider/pots_860x219.jpg"); }
+    #img3 {background-image: url("../images/slider/knives_860x219.jpg"); }
+    
+    #product-list .card  {
+      width: 160px;
+    }
+    #product-list .card img {
+      width: 160px;
+      height: 200px;
+    }
+    #product-list .product-name  {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    #product-list p span {
+      font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  
+    #main_header nav {
+      width: 400px;
+      float: right;
+    }
+    
+    /********* SLIDER ***********/
+    
+    #slider {
+      height: 348px;
+    }  
+    .slide .content {
+      margin-top: 60px; 
+      width: 80%;
+      padding: 20px 30px;
+    }
+    .slide .content h1 {
+      font-size: 40px;
+    }
+    .slide .content h3 {
+      font-size: 28px;
+    }
+    #img1 {background-image: url("../images/slider/kitchen_1366x348.jpg"); }
+    #img2 {background-image: url("../images/slider/pots_1366x348.jpg"); }
+    #img3 {background-image: url("../images/slider/knives_1366x348.jpg"); }
+    
+    #product-list p  {
+      line-height: 20px;
+      text-align: center;
+    }
+
+    #product-list p span {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    #about #delivery {
+      width: 450px;
+      
+    }
+}
+
+@media screen and (min-width: 1367px) {
+    
+    /********* SLIDER ***********/
+    
+    #slider {
+      height: 489px;
+    } 
+    .slide .content {
+      margin-top: 240px;  
+      width: 50%;
+      padding: 30px 40px;
+    }
+    .slide .content h1 {
+      font-size: 36px;
+    }
+    .slide .content h3 {
+      font-size: 28px;
+    }
+    
+    #img1 {background-image: url("../images/slider/kitchen_1920x489.jpg"); }
+    #img2 {background-image: url("../images/slider/pots_1920x489.jpg"); }
+    #img3 {background-image: url("../images/slider/knives_1920x489.jpg"); }
+
+    #product-list p {
+      text-align: center;
+      line-height: 20px;
+    }
+    #product-list p span {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    #main_header nav {
+      width: 400px;
+      float: right;
+    }
+    #about #delivery {
+      width: 500px;
+    }
+}
+
+@media screen and (max-height: 321px){
+  
+  #main_header nav {
+    max-height: 240px;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (min-height: 322px) and (max-height: 380px){
+  #main_header nav {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+}
+@media screen and (min-height: 381px) and (max-height: 510px){
+  #main_header nav {
+    max-height: 350px;
+    overflow-y: scroll;
+  }
+}
+
+
+a[href^="tel"] {
+    color: white;
+}

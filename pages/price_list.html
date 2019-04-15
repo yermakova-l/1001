@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = 'description' content ='Кухонне приладдя - продаж оптом і в роздріб'>
+    <title>1001 дрібниця для кухні</title>
+    
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/price.css" type="text/css" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <header id="main_header">
+            <div id="logo">
+                <a href="../index.html"><img src="../images/logo.png" alt="Логотип магазину 1001 дрібничка" /></a>
+                <div class="clear"></div>
+            </div>
+            <div id="menu_collapsed">
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+            </div>
+            <div class="clear"></div>
+            <nav>
+                <div class="clear"></div>
+                <ul class='active'>
+                    <li><a href="../index.html">Головна сторінка</a></li>
+                    <li><a href="./knives.html">Ножі та ножниці</a></li>
+                    <li><a href="./pots_pans.html">Каструлі, сковорідки, чайники</a></li>
+                    <li><a href="./baking.html">Дечки, формочки, підноси</a></li>
+                    <li><a href="./spoons.html">Ложки, черпаки, лопатки</a></li>
+                    <li><a href="./cut.html">М'ясорубки,тертки, шатківниці</a></li>
+                    <li><a href="./manicure.html">Засоби для манікюру та бриття</a></li>
+                    <li><a href="./instruments.html">Інструменти, замки, барбекю, клей</a></li>
+                    <li><a href="./clean.html">Все для підтримання чистоти і порядку</a></li>
+                    <li><a href="./scooters.html">Подарунки для дітей - скутери і скейтборди</a></li>
+                    <li><a href="../index.html#about">Контакти</a></li>
+                </ul>
+            </nav>
+            
+            <div class="clear"></div>
+        </header>
+        <div id="price-list-body">
+            <div class="category-price">
+                <h1 class='price-header'>Ножі</h1>
+                <div id="knives_table"></div>
+            </div>
+            <div class="category-price">
+                <h1 class='price-header'>Все для випічки</h1>
+                <div id="baking_table"></div>
+            </div>
+            <div class="category-price">
+                <h1 class='price-header'>Ложки, черпаки...</h1>
+                <div id="spoons_table"></div>
+            </div>
+            <div class="category-price">
+                <h1 class='price-header'>Каструлі, сковорідки...</h1>
+                <div id="pans_table"></div>
+            </div>
+            <div class="category-price">
+                <h1 class='price-header'>М'ясорубки,тертки...</h1>
+                <div id="cut_table"></div>
+            </div>
+            <div class="category-price">
+                <h1 class='price-header'>Засоби для манікюру та бриття</h1>
+                <div id="manicure_table"></div>
+            </div>
+            <div class="category-price">
+                <h1 class='price-header'>Інструменти, замки...</h1>
+                <div id="instruments_table"></div>
+            </div>
+            <div class="category-price">
+                <h1 class='price-header'>Все для чистоти і порядку</h1>
+                <div id="clean_table"></div>
+            </div>
+            <div class="category-price">
+                <h1 class='price-header'>Cкутери і скейтборди</h1>
+                <div id="scooters_table"></div>
+            </div>
+         
+        </div><!----price-list-body-----> 
+        <div id='about'>
+            <h4>Магазин <br />"1001 дрібничка":<br />
+             м.Рівне, вул. Сагайдачного, 5</h4>
+            <p>Телефони для замовлення товару:</p>
+            <h4>+38 096 32 86 131 Наталя<br />+38 068 09 34 410 Микола</h4>
+            <p>Електронна пошта: 1999YanaNikita@ukr.net</p>
+            <h4></h4>
+            <p id="delivery">Здійснюємо безкоштовну доставку оптових замовлень в межах Рівненської та Волинської області своїм транспортом.<br /> Доставка в межах України Новою Поштою.</p>    
+        </div><!-- ABOUT US -->
+        
+        
+        
+    </div><!--  wrapper---->           
+        
+    <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="../js/catalog/knives.js"></script>
+    <script type="text/javascript" src="../js/catalog/baking.js"></script>
+    <script type="text/javascript" src="../js/catalog/pans.js"></script>
+    <script type="text/javascript" src="../js/catalog/spoons.js"></script>
+    <script type="text/javascript" src="../js/catalog/cut.js"></script>
+    <script type="text/javascript" src="../js/catalog/manicure.js"></script>
+    <script type="text/javascript" src="../js/catalog/instruments.js"></script>
+    <script type="text/javascript" src="../js/catalog/clean.js"></script>
+    <script type="text/javascript" src="../js/catalog/scooters.js"></script>
+    
+    <script type="text/javascript" src="../js/showPriceList.js"></script>
+    <script type="text/javascript">
+        showPriceList(knives, 'knives_table');
+        showPriceList(baking, 'baking_table');
+        showPriceList(pans, 'pans_table');
+        showPriceList(spoons, 'spoons_table');
+        showPriceList(cut, 'cut_table');
+        showPriceList(manicure, 'manicure_table');
+        showPriceList(instruments, 'instruments_table');
+        showPriceList(clean, 'clean_table');
+        showPriceList(scooters,'scooters_table');
+        
+        
+    </script>
+    
+</body>
+</html>
